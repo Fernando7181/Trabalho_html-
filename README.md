@@ -1,4 +1,4 @@
-# Creating a anime website based of HTML, CSS & Javascropt
+# Creating an anime website based on HTML, CSS & Javascript
 
 
 #

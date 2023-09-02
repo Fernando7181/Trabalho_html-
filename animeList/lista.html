@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Anime-se/Lista</title>
+
+    <link rel="stylesheet" href="lista.css" />
+</head>
+<body>
+    <header>
+        <p>Perfil</p>
+        <p>Animes</p>
+        <p>Forum</p>
+        <p>Sobre</p>
+        <p>Sair</p>
+    </header>
+    <h1>Anime-se// List</h1>
+
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Digite sua pesquisa">
+    </div>
+
+    <div id="searchResults"> </div>
+    <div id="animeList">
+        
+
+<div id='table-container'></div>
+
+ 
+<script>
+  CsvToHtmlTable.init({
+    csv_path:'anime-data.csv',
+    element: 'table-container', 
+    allow_download: true,
+    csv_options: {separator: ';', delimiter: '"'},
+    datatables_options: {"paging": false}
+  });
+</script>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

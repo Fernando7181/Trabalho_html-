@@ -2,36 +2,52 @@ html{
     background-color: rgb(208,204,204);
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 115;
-    padding-left: 30;
-    padding-right: 30;
-    border-bottom: 1px solid black;
+body{
+font-family: Georgia, serif;
+background-color: rgb(208, 204, 204);
 }
 
+header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1px;
+    padding-left:30px;
+    padding-right:30px;
+    border-bottom: 1px solid black;
+    background-color: rgb(208, 204, 204);
+}
+
+
 main{
+    font-family: Georgia, serif;
     display: flex;
     justify-content: center;
 }
+
 #sobre{
+    font-family: Georgia, serif;
     text-align: center;
-    margin-bottom: 60;
-    margin-left: 30;
+    margin-bottom: 60px;
+    margin-left: 30px;
+    background-color: #f2f2f2;
+    padding: 7px;
+    color: #333;
 }
 
 .fileira{
+    font-family: Georgia, serif;
     display: flex;
     height: 400;
     margin-left: 90px;
 }
 
 .fileiraespecial{
+    font-family: Georgia, serif;
     height: 400;
 }
 
 .image{
+    font-family: Georgia, serif;
     max-width:255 ;
     max-height: 255;
     width: auto;
@@ -40,11 +56,13 @@ main{
 }
 
 .pessoa{
+    font-family: Georgia, serif;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .pessoa>#desc{
+    font-family: Georgia, serif;
     width: 850px;
 }

@@ -5,56 +5,76 @@ html{
 }
 
 main{
+    font-family: Georgia, serif;
     display: flex;
     justify-content: center;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 115;
-    padding-left: 30;
-    padding-right: 30;
-    border-bottom: 1px solid black;
-    background-color: rgb(208,204,204);
-
+#perfil{
+        font-family: Georgia, serif;
+        text-align: center;
+        margin-bottom: 60px;
+        margin-left: 30px;
+        background-color: #f2f2f2;
+        padding: 7px;
+        color: #333;
 }
 
+header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1px;
+    padding-left:30px;
+    padding-right:30px;
+    border-bottom: 1px solid black;
+    background-color: rgb(208, 204, 204);
+    }
+
+
 a{
+    font-family: Georgia, serif;
     text-decoration: none;
     color: black;
 }
 
 .container{
-    margin-top: -30;
-    width: 1600;
-    height: 800;
+    font-family: Georgia, serif;
+    margin-top: -30px;
+    width: 1600px;
+    height: 800px;
+    margin-left: 200px;
     display: flex;
     justify-content:space-between;
     
 }
 
 .container-left{
-    width: 226;
-    height: 800;
+    font-family: Georgia, serif;
+    margin-left: 20px;
+    width: 226px;
+    height: 800px;
+    margin-right: 100px;
     border: 2px solid rgb(158, 154, 154);
     background-color: antiquewhite;
 
 }
 
 .container-right{
-    width: 800;
-    height: 1102;
+    font-family: Georgia, serif;
+    width: 800px;
+    height: 1102px;
     border: 1px solid rgb(158, 154, 154);
-    margin-right: 385;
+    margin-right: 385px;
     background-color: antiquewhite;
 }
 
 .minibox{
+    font-family: Georgia, serif;
     border: 1px solid rgb(158, 154, 154);
 }
 
 .identidade>strong{
+    font-family: Georgia, serif;
     width: 226px;
     height: 18px;
     display: flex;
@@ -63,101 +83,104 @@ a{
 }
 
 .pfp{
+    font-family: Georgia, serif;
     width: 226px;
     height: 226px;
 }
 
 .minibox>b{
+    font-family: Georgia, serif;
     display: flex;
     justify-content: center;
-    padding-top: 18;
-    padding-bottom: 10;
+    padding-top: 18px;
+    padding-bottom: 10px;
 
 }
 
 #biografia{
+    font-family: Georgia, serif;
     display: flex;
     justify-content: center;
-    padding-top: 9;
-    padding-bottom: 10;
-    padding-left: 10;
-    width: 780;
-    height: 118;
+    padding-top: 9px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    width: 780px;
+    height: 118px;
 
 }
 
 .status{
-
-    width: 799;
-    height: 200;
+    font-family: Georgia, serif;
+    width: 799px;
+    height: 200px;
 
 }
 
 .bolaStatusVerde::before{
-    width: 12;
-    height: 12;
+    width: 12px;
+    height: 12px;
     border-radius: 1rem;
     display: block;
     content: ' ';
     background-color: #2db039;
     position: absolute;
-    margin-left: -20;
-    margin-top: 2;
+    margin-left: -20px;
+    margin-top: 2px;
 }
 
 .bolaStatusAzul::before{
-    width: 12;
-    height: 12;
+    width: 12px;
+    height: 12px;
     border-radius: 1rem;
     display: block;
     content: ' ';
     background-color: #26448f;
     position: absolute;
-    margin-left: -20;
-    margin-top: 2;
+    margin-left: -20px;
+    margin-top: 2px;
 }
 
 .bolaStatusVermelho::before{
-    width: 12;
-    height: 12;
+    width: 12px;
+    height: 12px;
     border-radius: 1rem;
     display: block;
     content: ' ';
     background-color: #a12f31;
     position: absolute;
-    margin-left: -20;
-    margin-top: 2;
+    margin-left: -20px;
+    margin-top: 2px;
 }
 
 .bolaStatusAmarelo::before{
-    width: 12;
-    height: 12;
+    width: 12px;
+    height: 12px;
     border-radius: 1rem;
     display: block;
     content: ' ';
     background-color: #e7b715;
     position: absolute;
-    margin-left: -20;
-    margin-top: 2;
+    margin-left: -20px;
+    margin-top: 2px;
 }
 
 .report1{
     display: flex;
     justify-content: space-evenly;
-    width: 800;
-    height: 60;
+    width: 800px;
+    height: 60px;
 }
 
 .report2{
     display: flex;
     justify-content: space-evenly;
-    width: 800;
-    height: 60;
+    width: 800px;
+    height: 60px;
 }
 
 .grafico{
-    width: 800;
-    height: 200;
+    width: 800px;
+    height: 200px;
 }
 
 .info{
@@ -213,7 +236,7 @@ a{
 }
 
 .personagens>b{
-    padding-top: 60;
+    padding-top: 60px;
     display:flex;
     justify-content:center;
     padding-bottom: 30px;
@@ -227,8 +250,8 @@ a{
 
 
 #favchar1{
-    max-width: 210;
-    max-height: 210;
+    max-width: 210px;
+    max-height: 210px;
     width: auto;
     height: auto;
     border-radius: 50%;
@@ -237,8 +260,8 @@ a{
 
 
 #favchar2{
-    max-width: 210;
-    max-height: 210;
+    max-width: 210px;
+    max-height: 210px;
     width: auto;
     height: auto;
     border-radius: 50%;
@@ -249,15 +272,15 @@ a{
 .animesfavoritos{
     display: grid;
     grid-template-columns: auto auto auto auto;
-    width: 800;
-    height: 350;
+    width: 800px;
+    height: 350px;
     justify-content: space-around;
     margin-top: 17px;
 
 }
 
 .posters{
-    max-width: 120;
+    max-width: 120px;
     max-height: 140;
     width: auto;
     height: auto;

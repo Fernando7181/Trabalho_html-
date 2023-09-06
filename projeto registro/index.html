@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Usuário</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+
+<body>
+    <h1>Cadastro de Usuário</h1>
+    <form id="cadastroForm"   onsubmit="return validarSenha()">
+        
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="username">Nome de Usuário:</label>
+        <input type="text" id="username" name="username" required><br>
+
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" required><br>
+
+        
+        <label for="conf_senha">Confirmar Senha:</label>
+        <input type="password" id="conf_senha" name="conf_senha" required><br>
+
+        <label for="data_aniversario">Data de Aniversário:</label>
+        <input type="date" id="data_aniversario" name="data_aniversario" required><br>
+
+        <input type="submit" value="Cadastrar">
+    </form>
+    <script src="verificacao.js"></script>
+    
+</body>
+</html>

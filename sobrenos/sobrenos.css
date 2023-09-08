@@ -65,4 +65,6 @@ main{
 .pessoa>#desc{
     font-family: Georgia, serif;
     width: 850px;
+    display: flex;
+    justify-content: center;
 }

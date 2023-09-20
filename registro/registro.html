@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Usuário</title>
+    <link rel="stylesheet" type="text/css" href="registro.css">
+</head>
+
+
+<body>
+    <header>
+        <p><a href="./../profile/profile.html">Perfil</a></p>
+        <p><a href="./../animeList/lista.html">Animes</a></p>
+        <p><a href="./../forum/forum.html">Fórum</a></p>
+        <p><a href="./../sobrenos/sobrenos.html">Sobre</a></p>
+        <p>Lista</p>
+        <p><a href="./../registro/registro.html">Registrar</a></p>
+        <p>Sair</p>
+    </header>
+
+
+
+    <h1>Cadastro de Usuário</h1>
+    <form id="cadastroForm"   action="cadastro.php" method="post" onsubmit="return validarSenha()">
+        
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="username">Nome de Usuário:</label>
+        <input type="text" id="username" name="username" required><br>
+
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" required><br>
+
+        
+        <label for="conf_senha">Confirmar Senha:</label>
+        <input type="password" id="conf_senha" name="conf_senha" required><br>
+
+        <label for="data_aniversario">Data de Aniversário:</label>
+        <input type="date" id="data_aniversario" name="data_aniversario" required><br>
+
+        <input type="submit" value="Cadastrar">
+    </form>
+  
+    <script src="verificacao_senha.js"></script>
+    
+</body>
+</html>

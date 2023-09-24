@@ -1,4 +1,4 @@
-# Creating an anime website based on HTML, CSS & Javascript
+# Creating an anime website based on HTML, CSS, Javascript, PHP & SQL
 
 
 # License

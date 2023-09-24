@@ -1,6 +1,6 @@
 html{
     background-image: url(.png);
-    background-color: rgb(208,204,204);
+    background-color: #1b1b29;
 
 }
 
@@ -10,31 +10,28 @@ main{
     justify-content: center;
 }
 
-#perfil{
-        font-family: Georgia, serif;
-        text-align: center;
-        margin-bottom: 60px;
-        margin-left: 30px;
-        background-color: #f2f2f2;
-        padding: 7px;
-        color: #333;
-}
 
 header{
     display: flex;
     justify-content: space-between;
-    margin-bottom: 1px;
+    margin-bottom: 100px;
     padding-left:30px;
     padding-right:30px;
     border-bottom: 1px solid black;
-    background-color: rgb(208, 204, 204);
-    }
+    background-color: #474761;
+}
 
+#perfil{
+    border-bottom: groove;
+}    
+
+a:link, a:visited {
+    color: #CDCDDE;
+}
 
 a{
     font-family: Georgia, serif;
     text-decoration: none;
-    color: black;
 }
 
 .container{
@@ -54,8 +51,8 @@ a{
     width: 226px;
     height: 800px;
     margin-right: 100px;
-    border: 2px solid rgb(158, 154, 154);
-    background-color: antiquewhite;
+    background-color: #565674;
+    border: 2px solid #2B2B40;
 
 }
 
@@ -63,14 +60,16 @@ a{
     font-family: Georgia, serif;
     width: 800px;
     height: 1102px;
-    border: 1px solid rgb(158, 154, 154);
     margin-right: 385px;
-    background-color: antiquewhite;
 }
 
 .minibox{
     font-family: Georgia, serif;
-    border: 1px solid rgb(158, 154, 154);
+    border: 2px solid #2B2B40;
+    background-color: #565674;
+    margin-top: 1px;
+    margin-bottom: 25px;
+    border-radius: 15px;
 }
 
 .identidade>strong{
@@ -79,7 +78,8 @@ a{
     height: 18px;
     display: flex;
     justify-content: center; 
-    padding-top: 10px;   
+    padding-top: 10px;
+    color:  #CDCDDE;
 }
 
 .pfp{
@@ -94,6 +94,7 @@ a{
     justify-content: center;
     padding-top: 18px;
     padding-bottom: 10px;
+    color: #CDCDDE;
 
 }
 
@@ -106,6 +107,7 @@ a{
     padding-left: 10px;
     width: 780px;
     height: 118px;
+    color: #CDCDDE;
 
 }
 
@@ -113,6 +115,7 @@ a{
     font-family: Georgia, serif;
     width: 799px;
     height: 200px;
+    color: #CDCDDE;
 
 }
 
@@ -223,12 +226,14 @@ a{
 .quantidade{
     text-align: center;
     margin-top: -20px;
+    color: #CDCDDE;
 }
 
 .legenda{
     height: 20px;
     display: flex;
     text-align: center;
+    color: #CDCDDE;
 }
 
 .notas{
@@ -240,6 +245,7 @@ a{
     display:flex;
     justify-content:center;
     padding-bottom: 30px;
+    color: #CDCDDE;
 }
 
 .imagens{
@@ -255,7 +261,7 @@ a{
     width: auto;
     height: auto;
     border-radius: 50%;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 }
 
 
@@ -265,7 +271,7 @@ a{
     width: auto;
     height: auto;
     border-radius: 50%;
-    margin-bottom: 25px;
+    margin-bottom: 16px;
 }
 
 
@@ -284,26 +290,31 @@ a{
     max-height: 140;
     width: auto;
     height: auto;
+    padding: 5px;
+    border-color: #2B2B40;
+    border-style: dotted;
+
 }
 
 footer{
-    background-color: lightgoldenrodyellow;
+    background-color: #474761;
     left: 0px;
     right: 0px;
     bottom: 0px;
-    margin-top: 350px ;
+    margin-top: 410px ;
     padding: 41px;
     height: 40px;
     display: flex;
-   
+    color: #CDCDDE;    
 }
 
 
 .footer_content{
-    width: 100%;
     height: 60px;
     display: flex;
     justify-content: space-evenly;
+    color: #CDCDDE;
+    
 }
 .content{
     width: 610px;
@@ -314,11 +325,11 @@ ul > li {
     display: inline-block;
 }
 
-.right{
+#right{
     display: flex;
 }
 
-.left a{
+#left a{
     display: inline;
     list-style-type: none;
 }    

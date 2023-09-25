@@ -21,6 +21,11 @@ header{
     background-color: #474761;
 }
 
+#logo{
+    width: 130px;
+    height: 50px;
+}
+
 #perfil{
     border-bottom: groove;
 }    

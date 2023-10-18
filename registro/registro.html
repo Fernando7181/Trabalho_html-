@@ -9,13 +9,20 @@
 
 <body>
     <header>
-        <p><a href="./../profile/profile.html">Perfil</a></p>
-        <p><a href="./../animeList/lista.html">Animes</a></p>
-        <p><a href="./../forum/forum.html">Fórum</a></p>
-        <p><a href="./../sobrenos/sobrenos.html">Sobre</a></p>
-        <p>Lista</p>
-        <p><a href="./../registro/registro.html">Registrar</a></p>
-        <p>Sair</p>
+        <img id="logo" src="./logo.png">
+            <a href="./../profile/profile.html">Perfil</a>
+            <a href="./../animeList/lista.html">Animes</a>
+            <a href="./../forum/forum.html">Fórum</a>
+            <a href="./../sobrenos/sobrenos.html">Sobre</a>
+            <a href="">Lista</a>
+
+            <div class="div-navbar">
+
+            <a href="./../login/login.html">Login</a>
+            <a href="./../registro/registro.html">Registrar</a>
+            <a href="">Sair</a>
+
+            </div>
     </header>
 
 
@@ -23,24 +30,22 @@
     <h1>Cadastro de Usuário</h1>
     <form id="cadastroForm"   action="cadastro.php" method="post" onsubmit="return validarSenha()">
         
-
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" required><br>
-
-        <label for="username">Nome de Usuário:</label>
-        <input type="text" id="username" name="username" required><br>
-
-        <label for="senha">Senha:</label>
-        <input type="password" id="senha" name="senha" required><br>
+        <div class="input">
+        <input type="email" id="email" placeholder="E-mail"  name="email" required><br>
 
         
-        <label for="conf_senha">Confirmar Senha:</label>
-        <input type="password" id="conf_senha" name="conf_senha" required><br>
+        <input type="text" id="username" placeholder="Nome de Usuário"  name="username" required><br>
 
-        <label for="data_aniversario">Data de Aniversário:</label>
-        <input type="date" id="data_aniversario" name="data_aniversario" required><br>
+        <input type="password" id="senha" placeholder="Senha"  name="senha" required><br>
 
-        <input type="submit" value="Cadastrar">
+        
+        <input type="password" id="conf_senha" placeholder="Confirmar Senha"  name="conf_senha" required><br>
+
+        
+        <input type="date" id="data_aniversario" placeholder="Data de Aniversário"  name="data_aniversario" required><br>
+
+        <input type="submit" value="Cadastrar" >
+        </div>
     </form>
   
     <script src="verificacao_senha.js"></script>

@@ -1,5 +1,4 @@
 <?php
-
 include("registro.html");
 
 
@@ -47,7 +46,6 @@ if ($paran->num_rows > 0) {
     
     include("username_existente.php");
     
-    
 }
 
 elseif($pass->num_rows > 0){
@@ -62,9 +60,25 @@ else {
     $pass = $conn->prepare($sql);
     $pass->bind_param("ssss", $email, $username, $senha, $data_aniversario);
 
-    if ($pass->execute()) {
+    if ($pass->execute()){
         echo "Cadastro realizado com sucesso!";
-    } else {
+
+        $sql2 = "CREATE TABLE $username(
+            img varchar(200),
+            nome varchar(200),
+            nota varchar(200),
+            progresso varchar(200),
+            situacao varchar(200),
+            fav1 varchar(200),
+            fav2 varchar(200),
+            fav3 varchar(200),
+            fav4 varchar(200),
+            fav5 varchar(200),
+            fav6 varchar(200),
+            )";
+        $conn->query($sql2);
+    }
+    else {
         echo "Erro ao cadastrar: " . $conn->error;
     }
 }

@@ -3,11 +3,6 @@ include("registro.html");
 
 
 
-$email = $_POST['email'];
-$username = $_POST['username'];
-$senha = $_POST['senha'];
-$conf_senha = $_POST['conf_senha'];
-$data_aniversario = $_POST['data_aniversario'];
 
 
 $serverName = "mysqlhtml.mysql.database.azure.com";
@@ -23,6 +18,13 @@ $conn = new mysqli($serverName, $username1, $password, $databaseName);
 if ($conn->connect_error) {
     die("Conexão falhou: " . $conn->connect_error);
 }
+
+$email = $_POST['email'];
+$username = $_POST['username'];
+$senha = $_POST['senha'];
+$conf_senha = $_POST['conf_senha'];
+$data_aniversario = $_POST['data_aniversario'];
+
 
 
 $verificar_user = "SELECT username FROM usuarios WHERE username = ?";
@@ -63,19 +65,13 @@ else {
     if ($pass->execute()){
         echo "Cadastro realizado com sucesso!";
 
-        $sql2 = "CREATE TABLE $username(
+        $sql2 = "CREATE TABLE $username (
             img varchar(200),
             nome varchar(200),
-            nota varchar(200),
+            nota int,
             progresso varchar(200),
-            situacao varchar(200),
-            fav1 varchar(200),
-            fav2 varchar(200),
-            fav3 varchar(200),
-            fav4 varchar(200),
-            fav5 varchar(200),
-            fav6 varchar(200),
-            )";
+            situacao varchar(200)
+            );";
         $conn->query($sql2);
     }
     else {

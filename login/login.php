@@ -28,12 +28,19 @@ if ($paran->num_rows <=0) {
     
     
     include("infologin.php");
-   
+
 }
 
 else {
     
     include("infologin-prov.php");
+
+    if(!(isset($_SESSION))){
+        session_start();
+    }
+    
+    $_SESSION["username"] = $username;
+    header("location: ../profile/profile.php");
 }
 
 

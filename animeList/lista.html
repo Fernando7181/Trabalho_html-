@@ -3,7 +3,7 @@
 <head>
     <title>Anime-se/Lista</title>
 
-    <link rel="stylesheet" href="lista.css" />
+    <link rel="stylesheet" href="lista.css"/>
 </head>
 <body>
     <header>
@@ -15,15 +15,34 @@
         <p><a href="./../registro/registro.html">Registrar</a></p>
         <p>Sair</p>
     </header>
-    <h1 id = "List">Anime-se // List</h1>
+    <h1 id = "List">Anime-se</h1>
 
     <div class="search-container">
         <input type="text" id="searchInput" placeholder="Digite sua pesquisa">
     </div>
 
+    <div class = "modal">
+      <button id="fechar" onclick="fecharBio()">fechar</button>
+      <form action="anime.php" method="post" onsubmit="setTimeout(function(){window.location.reload();},10);">
+        <p><label >personalize:</label></p>
+        <p><label >nome:</label></p>
+        <textarea name="nome" rows="1" cols="20"></textarea><br>
+        <p><label >link imagem:</label></p>
+        <textarea name="img" rows="1" cols="20"></textarea><br>
+        <p><label >nota:</label></p>
+        <textarea name="nota" rows="1" cols="20"></textarea><br>
+        <p><label >progresso x/y:</label></p>
+        <textarea name="progresso" rows="1" cols="20"></textarea><br>
+        <input type="submit" name="situacao" value="completado"/>
+        <input type="submit" name="situacao" value="assistindo"/>
+        <input type="submit" name="situacao" value="dropado"/>
+        <input type="submit" name="situacao" value="planejado"/>
+      </form>
+    </div>
+
     <div id="searchResults"> </div>
-    <div id="animeList">
-        
+    <div id="animeList"></div>
+
 
 <div id='table-container'></div>
 
@@ -40,5 +59,7 @@
     </div>
 
     <script src="script.js"></script>
+    <script src="modal.js"></script>
+
 </body>
 </html>

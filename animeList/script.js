@@ -25,23 +25,20 @@ function parseCSV(csvData) {
         var descriptionElement = document.createElement("p");
         descriptionElement.textContent = columns[3];
         animeElement.appendChild(descriptionElement);
+
+        var divButao = document.createElement("div");
+        divButao.id = "butao";
+
+        var btnSalvar = document.createElement("button");
+        btnSalvar.textContent = "salvar";
+        btnSalvar.id = "btnBio";
+        btnSalvar.setAttribute("onclick","abrirBio()");
+
+
+        divButao.appendChild(btnSalvar);
+        animeElement.appendChild(divButao);
         
-        var btnAssistindo = document.createElement("button");
-        btnAssistindo.textContent = "Assistindo";
 
-        var btnPlanejado = document.createElement("button");
-        btnPlanejado.textContent = "Planejado";
-
-        var btnCompletado = document.createElement("button");
-        btnCompletado.textContent = "Completado";
-
-        var btnDropado = document.createElement("button");
-        btnDropado.textContent = "dropado";
-
-        animeElement.appendChild(btnAssistindo);
-        animeElement.appendChild(btnCompletado);
-        animeElement.appendChild(btnDropado);
-        animeElement.appendChild(btnPlanejado);
 
         document.getElementById("animeList").appendChild(animeElement);
 
@@ -85,3 +82,15 @@ document.getElementById('searchInput').addEventListener('input', function() {
     var query = this.value;
     search(query);
 });
+
+function abrirBio(){
+    let modal = document.querySelector(".modal");
+    modal.style.display = "block"; 
+}
+
+function fecharBio(){
+    let modal = document.querySelector(".modal");
+    modal.style.display = "none"; 
+
+
+}

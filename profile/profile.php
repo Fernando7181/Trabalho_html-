@@ -1,8 +1,27 @@
+<?php
+    session_start();
+    $serverName = "mysqlhtml.mysql.database.azure.com";
+    $databaseName = "usuarios";
+    $username1 = "grupohtml";
+    $password = "Nota@100";
+    $port = 3306;
+
+    $conn = new mysqli($serverName, $username1, $password, $databaseName);
+    $sql = "SELECT biografia FROM usuarios WHERE username = ?;";
+    $res = $conn->prepare($sql);
+    $res->bind_param("s", $_SESSION["username"]);
+    $res->execute();
+    $res->store_result();
+    $res->bind_result($biografia);
+    $res = mysqli_stmt_fetch($res);
+    
+?>
 <html>
     <head>
         <meta charset="UTF-8">
         <title>ANIME-SE / Perfil</title>
         <link rel="stylesheet" href="profile.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     </head>
     <body>
         <header>
@@ -29,7 +48,7 @@
                         <div class="pfp">
                             <img src="./pictures/sesshomaru.jpg">
                         </div>
-                        <strong>Lucas</strong>
+                        <strong id="username"><?php echo $_SESSION["username"]?></strong>
                     </div>
                     <div class="personagens">
                         <b>Personagens Favoritos</b>
@@ -42,7 +61,19 @@
                 <div class="container-right">
                     <div class="minibox">
                         <b>Biografia</b>
-                        <p id="biografia">O Naruto pode ser um pouco duro às vezes, talvez você não saiba disso, mas o Naruto também cresceu sem pai. Na verdade ele nunca conheceu nenhum de seus pais, e nunca teve nenhum amigo em nossa aldeia. Mesmo assim eu nunca vi ele chorar, ficar zangado ou se dar por vencido, ele está sempre disposto a melhorar, ele quer ser respeitado, é o sonho dele e o Naruto daria a vida por isso sem hesitar. Meu palpite é que ele se cansou de chorar e decidiu fazer alguma coisa a respeito!</p>
+                        <p id="biografia"><?php echo $biografia?></p>
+                        <div id="butao">
+                            <button id="btnBio" onclick="abrirBio()">editar</button>
+                        </div>
+                    </div>
+                    <div class = "modal">
+                        <button id="fechar" onclick="fecharBio()">fechar</button>
+                        <form action="biografia.php" method="post" onsubmit="setTimeout(function(){window.location.reload();},10);">
+                          <p><label for="bioid">Escreva sobre voce:</label></p>
+                          <textarea id="bioid" name="biografia" rows="10" cols="50">biografia</textarea>
+                          <br>
+                          <input type="submit" value="salvar">
+                        </form>
                     </div>
                     <div class="minibox">
                         <b>Status</b>
@@ -188,6 +219,11 @@
         </footer>
         <script src="profile-status-graph.js"></script>
         <script src="profile-score-graph.js"></script>
+
+        <script src="edit-bio.js"></script>
     </body>
+    <?php
+        $conn->close();
+    ?>
 </html>
 

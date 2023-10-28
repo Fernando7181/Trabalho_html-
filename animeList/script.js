@@ -25,9 +25,26 @@ function parseCSV(csvData) {
         var descriptionElement = document.createElement("p");
         descriptionElement.textContent = columns[3];
         animeElement.appendChild(descriptionElement);
+        
+        var btnAssistindo = document.createElement("button");
+        btnAssistindo.textContent = "Assistindo";
 
+        var btnPlanejado = document.createElement("button");
+        btnPlanejado.textContent = "Planejado";
+
+        var btnCompletado = document.createElement("button");
+        btnCompletado.textContent = "Completado";
+
+        var btnDropado = document.createElement("button");
+        btnDropado.textContent = "dropado";
+
+        animeElement.appendChild(btnAssistindo);
+        animeElement.appendChild(btnCompletado);
+        animeElement.appendChild(btnDropado);
+        animeElement.appendChild(btnPlanejado);
 
         document.getElementById("animeList").appendChild(animeElement);
+
     }
 }
 

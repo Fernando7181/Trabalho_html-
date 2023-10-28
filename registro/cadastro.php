@@ -63,18 +63,12 @@ else {
     if ($pass->execute()){
         echo "Cadastro realizado com sucesso!";
 
-        $sql2 = "CREATE TABLE $username(
+        $sql2 = "CREATE TABLE $username (
             img varchar(200),
             nome varchar(200),
             nota varchar(200),
             progresso varchar(200),
-            situacao varchar(200),
-            fav1 varchar(200),
-            fav2 varchar(200),
-            fav3 varchar(200),
-            fav4 varchar(200),
-            fav5 varchar(200),
-            fav6 varchar(200),
+            situacao varchar(200)
             )";
         $conn->query($sql2);
     }

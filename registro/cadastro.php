@@ -73,6 +73,8 @@ else {
             situacao varchar(200)
             );";
         $conn->query($sql2);
+
+        header("location: ../login/login.html ");
     }
     else {
         echo "Erro ao cadastrar: " . $conn->error;

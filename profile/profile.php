@@ -36,7 +36,7 @@
 
             <a href="./../login/login.html">Login</a>
             <a href="./../registro/registro.html">Registrar</a>
-            <a href="">Sair</a>
+            <a href="./../sair/sair.php">Sair</a>
 
             </div>
         </header>

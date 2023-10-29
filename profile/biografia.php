@@ -17,7 +17,6 @@ if ($conn->connect_error) {
 $biografia = $_POST["biografia"] ;
 $username = $_SESSION["username"];
 
-
 $atualizar_bio = "UPDATE usuarios SET biografia = ? WHERE username= ?;";
 $paran = $conn->prepare($atualizar_bio);
 $paran->bind_param("ss", $biografia,$username);

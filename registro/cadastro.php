@@ -44,14 +44,13 @@ $pass->store_result();
 
 if ($paran->num_rows > 0) {
    
-    echo "Username já existe. Por favor, escolha outro.";
     
     include("username_existente.php");
     
 }
 
 elseif($pass->num_rows > 0){
-    echo "E-mail já Cadastrado. ";
+    
     include("email_existente.php");
 
 }

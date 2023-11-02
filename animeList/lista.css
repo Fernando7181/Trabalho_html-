@@ -1,11 +1,11 @@
 body {
 font-family: Georgia, serif;
-background-color: #f2f2f2; 
+background-color: #1b1b29;
 }
 
 h1 {
 text-align: center;
-color: #333;
+color: #CDCDDE;
 }
 
 #butao{
@@ -60,9 +60,28 @@ header{
     padding-left:30px;
     padding-right:30px;
     border-bottom: 1px solid black;
-    background-color: rgb(208, 204, 204);
-    }
+    background-color:  #474761;
+}
 
+header a{
+   
+        padding: 14px 16px;
+}
+    
+header a:hover{
+            background-color: #807c7c;
+            color: rgb(51, 49, 49);
+}
+    
+.separador{
+                display: inline-block;
+                padding: 14px;
+                padding-left: 16px;
+    }        
+    
+a:link, a:visited {
+        color: #CDCDDE;
+}
 
 .search-container {
 display: flex;

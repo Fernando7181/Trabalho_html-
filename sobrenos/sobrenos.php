@@ -13,20 +13,22 @@ if (!isset($_SESSION["username"])){
     </head>
     <body>
         <header>
-            <a href="./../profile/profile.php">Perfil</a>
-            <a href="./../animeList/lista.php">Animes</a>
-            <a href="./../forum/forum.php">Fórum</a>
-            <a href="./../sobrenos/sobrenos.php">Sobre</a>
+            <img id="logo" src="/forum/pictures/LGOO_ANIMA__1_-removebg-preview.png"
+            width="150px"
+            height="50px">
+            <a href="/profile/profile.php">Perfil</a>
+            <a href="/animeList/lista.php">Animes</a>
+            <a href="/forum/forum.php">Fórum</a>
+            <a href="/sobrenos/sobrenos.php">Sobre</a>
             <a href="">Lista</a>
-
-            <div class="div-navbar">
-
-            <a href="./../login/login.html">Login</a>
-            <a href="./../registro/registro.html">Registrar</a>
-            <a href="./../sair/sair.php">Sair</a>
-
-            </div>
-        </header>
+       
+                   <div class="separador">
+       
+                   <a href="./../login/login.html">Login</a>
+                   <a href="./../registro/registro.html">Registrar</a>
+                   <p><a href="./../sair/sair.php">Sair</a></p>
+               </div>
+           </header>
         <main>
             <div class="container">
                  <div id="sobre">
@@ -79,5 +81,32 @@ if (!isset($_SESSION["username"])){
                 </div>
             </div>
         </main>
+        <footer>
+            <div class="footer_content">
+                <div id="left" class="content" >
+                    <p>Acompanhe o pessoal da ANIME-SE!</p>
+                     
+                
+                </div>    
+                <div id="center"class="content">
+                    <ul>
+                        <li><a href="./../profile/profile.html">Perfil</a></li>
+                        <li><a href="./../animeList/lista.html">Animes</a></li>
+                        <li><a href="./../forum/forum.html">Fórum</a></li>
+                        <li><a href="./../sobrenos/sobrenos.html">Sobre</a></li>
+                        <li><a href="#">Lista</a></li>
+                        <li><a href="#">Sair</a></li>
+                    </ul> 
+                </div>
+                <div id="right" class content>
+                    <h3>&#169 2023 all rights reserved ANIME-SE</h3>
+        
+                </div>
+
+
+
+
+            </div>
+        </footer>    
     </body>
 </html>

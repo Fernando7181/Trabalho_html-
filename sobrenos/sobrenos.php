@@ -32,7 +32,7 @@ if (!isset($_SESSION["username"])){
         <main>
             <div class="container">
                  <div id="sobre">
-                     <h2>ANIME-SE // Sobre nós</h2>
+                     <h2>Sobre nós</h2>
                  </div>
                  <div id="fileira1" class="fileira">
                      <div class="pessoa">

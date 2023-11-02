@@ -66,7 +66,7 @@ else {
         echo "Cadastro realizado com sucesso!";
 
         $sql2 = "CREATE TABLE $username (
-            img varchar(200),
+            img varchar(1000),
             nome varchar(200),
             nota int,
             progresso varchar(200),

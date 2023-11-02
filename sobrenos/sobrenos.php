@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (!isset($_SESSION["username"])){
+    header("location: ./../login/login.html");
+}
+?>
+
 <html>
     <head>
         <meta charset="UTF-8">
@@ -9,10 +16,10 @@
             <img id="logo" src="/forum/pictures/LGOO_ANIMA__1_-removebg-preview.png"
             width="150px"
             height="50px">
-            <a href="/profile/profile.html">Perfil</a>
-            <a href="/animeList/lista.html">Animes</a>
-            <a href="/forum/forum.html">Fórum</a>
-            <a href="/sobrenos/sobrenos.html">Sobre</a>
+            <a href="/profile/profile.php">Perfil</a>
+            <a href="/animeList/lista.php">Animes</a>
+            <a href="/forum/forum.php">Fórum</a>
+            <a href="/sobrenos/sobrenos.php">Sobre</a>
             <a href="">Lista</a>
        
                    <div class="separador">

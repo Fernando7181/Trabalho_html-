@@ -19,7 +19,7 @@ function editBio(){
 }
 
 function abrirBio(){
-    let modal = document.querySelector(".modal");
+    let modal = document.querySelector(".modalBio");
     let bolaVerde = document.querySelector(".bolaStatusVerde::before")
     console.log(bolaVerde);
     modal.style.display = "block"; 
@@ -30,7 +30,51 @@ function abrirBio(){
 }
 
 function fecharBio(){
-    let modal = document.querySelector(".modal");
+    let modal = document.querySelector(".modalBio");
+    let bolaVerde = document.querySelector(".bolaStatusVerde::before")
+    modal.style.display = "none"; 
+    document.styleSheets[0].addRule('.bolaStatusVerde::before', 'display: block;');
+    document.styleSheets[0].addRule('.bolaStatusAzul::before', 'display: block;');
+    document.styleSheets[0].addRule('.bolaStatusVermelho::before', 'display: block;');
+    document.styleSheets[0].addRule('.bolaStatusAmarelo::before', 'display: block;');
+
+}
+
+function abrirImg(){
+    let modal = document.querySelector(".modalImg");
+    let bolaVerde = document.querySelector(".bolaStatusVerde::before")
+    console.log(bolaVerde);
+    modal.style.display = "block"; 
+    document.styleSheets[0].addRule('.bolaStatusVerde::before', 'display: none;');
+    document.styleSheets[0].addRule('.bolaStatusAzul::before', 'display: none;');
+    document.styleSheets[0].addRule('.bolaStatusVermelho::before', 'display: none;');
+    document.styleSheets[0].addRule('.bolaStatusAmarelo::before', 'display: none;');
+}
+
+function fecharImg(){
+    let modal = document.querySelector(".modalImg");
+    let bolaVerde = document.querySelector(".bolaStatusVerde::before")
+    modal.style.display = "none"; 
+    document.styleSheets[0].addRule('.bolaStatusVerde::before', 'display: block;');
+    document.styleSheets[0].addRule('.bolaStatusAzul::before', 'display: block;');
+    document.styleSheets[0].addRule('.bolaStatusVermelho::before', 'display: block;');
+    document.styleSheets[0].addRule('.bolaStatusAmarelo::before', 'display: block;');
+
+}
+
+function abrirFavchar(){
+    let modal = document.querySelector(".modalFavchar");
+    let bolaVerde = document.querySelector(".bolaStatusVerde::before")
+    console.log(bolaVerde);
+    modal.style.display = "block"; 
+    document.styleSheets[0].addRule('.bolaStatusVerde::before', 'display: none;');
+    document.styleSheets[0].addRule('.bolaStatusAzul::before', 'display: none;');
+    document.styleSheets[0].addRule('.bolaStatusVermelho::before', 'display: none;');
+    document.styleSheets[0].addRule('.bolaStatusAmarelo::before', 'display: none;');
+}
+
+function fecharFavchar(){
+    let modal = document.querySelector(".modalfavchar");
     let bolaVerde = document.querySelector(".bolaStatusVerde::before")
     modal.style.display = "none"; 
     document.styleSheets[0].addRule('.bolaStatusVerde::before', 'display: block;');

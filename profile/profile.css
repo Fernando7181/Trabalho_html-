@@ -120,8 +120,7 @@ a{
     color:  #CDCDDE;
 }
 
-.pfp{
-    font-family: Georgia, serif;
+.pfp>img{
     width: 226px;
     height: 226px;
 }
@@ -149,13 +148,45 @@ a{
 
 }
 
-#butao{
+#butaobio{
     display: flex;
     justify-content: end;
     margin-block-end: 0px;
 }
+#butaoimg{
+    display: flex;
+    justify-content: center;
+    margin-top: 4px;
+}
+#butaoFavchar{
+    display: flex;
+    justify-content: center;
+    margin-top: 4px;
+}
 
-.modal{
+.modalBio{
+    width: 500px;
+    height: 500px;
+    position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    display: none; 
+    background-color: #e7b715;   
+}
+
+.modalImg{
+    width: 500px;
+    height: 500px;
+    position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    display: none; 
+    background-color: #e7b715;   
+}
+
+.modalFavchar{
     width: 500px;
     height: 500px;
     position: absolute;
@@ -300,7 +331,7 @@ a{
 }
 
 .personagens>b{
-    padding-top: 60px;
+    padding-top: 35px;
     display:flex;
     justify-content:center;
     padding-bottom: 30px;

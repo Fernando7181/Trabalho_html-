@@ -3,7 +3,9 @@
 
 
 <script>
-
+        document.addEventListener("DOMContentLoaded", function() {
+                document.getElementById("info-mensagem").innerHTML = "<p class=\'inforegistro\'>E-mail já Cadastrado.</p>";
+            });
    
      var s_email = <?php echo json_encode($email); ?>;
      var s_username = <?php echo json_encode($username); ?>;

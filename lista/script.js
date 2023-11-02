@@ -13,13 +13,22 @@ document.addEventListener("DOMContentLoaded", function() {
 
     for (var i = 0; i < numRows; i++) {
       var tr = document.createElement('tr');
-  
+    
       for (var j = 0; j < numCols; j++) {
-          var td = document.createElement('td');
+        var td = document.createElement('td');
+    
+        if (j === 0) {
+          var img = document.createElement('img');
+          img.src = allAnimes[j][i];
+          img.classList.add('imagem');
+          td.appendChild(img);
+        } else {
           td.textContent = allAnimes[j][i];
-          tr.appendChild(td);
+        }
+    
+        tr.appendChild(td);
       }
-  
+    
       TabelaAnime.appendChild(tr);
     }
 

@@ -83,3 +83,25 @@ function fecharFavchar(){
     document.styleSheets[0].addRule('.bolaStatusAmarelo::before', 'display: block;');
 
 }
+
+function abrirFav(){
+    let modal = document.querySelector(".modalFav");
+    let bolaVerde = document.querySelector(".bolaStatusVerde::before")
+    console.log(bolaVerde);
+    modal.style.display = "block"; 
+    document.styleSheets[0].addRule('.bolaStatusVerde::before', 'display: none;');
+    document.styleSheets[0].addRule('.bolaStatusAzul::before', 'display: none;');
+    document.styleSheets[0].addRule('.bolaStatusVermelho::before', 'display: none;');
+    document.styleSheets[0].addRule('.bolaStatusAmarelo::before', 'display: none;');
+}
+
+function fecharFav(){
+    let modal = document.querySelector(".modalfav");
+    let bolaVerde = document.querySelector(".bolaStatusVerde::before")
+    modal.style.display = "none"; 
+    document.styleSheets[0].addRule('.bolaStatusVerde::before', 'display: block;');
+    document.styleSheets[0].addRule('.bolaStatusAzul::before', 'display: block;');
+    document.styleSheets[0].addRule('.bolaStatusVermelho::before', 'display: block;');
+    document.styleSheets[0].addRule('.bolaStatusAmarelo::before', 'display: block;');
+
+}

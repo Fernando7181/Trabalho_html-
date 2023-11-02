@@ -1,5 +1,8 @@
 <?php
-    session_start(); 
+    if(!isset($_SESSION)) 
+    { 
+        session_start(); 
+    } 
 
     if (!isset($_SESSION["username"])){
     header("location: ./../login/login.html");
@@ -38,6 +41,15 @@
     $res3->store_result();
     $res3->bind_result($favchar1,$favchar2);
     $res3 = mysqli_stmt_fetch($res3); 
+
+    #favanime
+    $sqlFav = "SELECT fav1,fav2,fav3,fav4,fav5,fav6,fav7,fav8 FROM usuarios WHERE username = ?;";
+    $res4 = $conn->prepare($sqlFav);
+    $res4->bind_param("s", $_SESSION["username"]);
+    $res4->execute();
+    $res4->store_result();
+    $res4->bind_result($fav1,$fav2,$fav3,$fav4,$fav5,$fav6,$fav7,$fav8);
+    $res4 = mysqli_stmt_fetch($res4); 
 ?>
 <html>
     <head>
@@ -78,7 +90,7 @@
                     </div>
                     <div class = "modalImg">
                         <button id="fechar" onclick="fecharImg()">fechar</button>
-                        <form action="pfp.php" method="post" onsubmit="">
+                        <form action="pfp.php" method="post" onsubmit="setTimeout(function(){window.location.reload();},32);">
                           <p><label for="pfpid">Link para sua pfp:</label></p>
                           <textarea id="pfpid" name="pfp" rows="10" cols="50">link</textarea>
                           <br>
@@ -96,7 +108,7 @@
                     </div>
                     <div class = "modalFavchar">
                         <button id="fechar" onclick="fecharFavchar()">fechar</button>
-                        <form action="favchar.php" method="post" onsubmit="">
+                        <form action="favchar.php" method="post" onsubmit="setTimeout(function(){window.location.reload();},32);">
                           <p><label for="favcharid">Link para seus personagens favoritos:</label></p>
                           <textarea id="favcharid" name="favchar1" rows="5" cols="50">link favchar1</textarea>
                           <br>
@@ -117,7 +129,7 @@
                     </div>
                     <div class = "modalBio">
                         <button id="fechar" onclick="fecharBio()">fechar</button>
-                        <form action="biografia.php" method="post" onsubmit="setTimeout(function(){window.location.reload();},10);">
+                        <form action="biografia.php" method="post" onsubmit="setTimeout(function(){window.location.reload();},32);">
                           <p><label for="bioid">Escreva sobre voce:</label></p>
                           <textarea id="bioid" name="biografia" rows="10" cols="50">biografia</textarea>
                           <br>
@@ -220,17 +232,44 @@
                     <div class="minibox">
                         <b>Animes Favoritos</b>
                         <div class="animesfavoritos">
-                            <img class="posters" src="./pictures/posterHXH.jpg">
-                            <img class="posters" src="./pictures/posterInuyasha.jpg">
-                            <img class="posters" src="./pictures/posterMononoke.jpg">
-                            <img class="posters" src="./pictures/poster Evangelion.jpg">
-                            <img class="posters" src="./pictures/posterChihiro.jpg">
-                            <img class="posters" src="./pictures/posterbebop.jpg">
-                            <img class="posters" src="./pictures/violet.jpg">
-                            <img class="posters" src="./pictures/bocchi.jpg">
+                            <img class="posters" src="<?php echo $fav1?>">
+                            <img class="posters" src="<?php echo $fav2?>">
+                            <img class="posters" src="<?php echo $fav3?>">
+                            <img class="posters" src="<?php echo $fav4?>">
+                            <img class="posters" src="<?php echo $fav5?>">
+                            <img class="posters" src="<?php echo $fav6?>">
+                            <img class="posters" src="<?php echo $fav7?>">
+                            <img class="posters" src="<?php echo $fav8?>">
+                        </div>
+                        <div id="butaofav">
+                            <button id="btnFav" onclick="abrirFav()">editar</button>
                         </div>
                     </div>
+                    <div class = "modalFav">
+                        <button id="fechar" onclick="fecharFav()">fechar</button>
+                        <form action="favanimes.php" method="post" onsubmit="setTimeout(function(){window.location.reload();},32);">
+                          <p><label for="favcharanimeid">Link para seus animes favoritos:</label></p>
+                          <textarea id="favcharanimeid" name="fav1" rows="2" cols="50">link</textarea>
+                          <br>
+                          <textarea id="favcharanimeid2" name="fav2" rows="2" cols="50">link</textarea>
+                          <br>
+                          <textarea id="favcharanimeid3" name="fav3" rows="2" cols="50">link</textarea>
+                          <br>
+                          <textarea id="favcharanimeid4" name="fav4" rows="2" cols="50">link</textarea>
+                          <br>
+                          <textarea id="favcharanimeid5" name="fav5" rows="2" cols="50">link</textarea>
+                          <br>
+                          <textarea id="favcharanimeid6" name="fav6" rows="2" cols="50">link</textarea>
+                          <br>
+                          <textarea id="favcharanimeid7" name="fav7" rows="2" cols="50">link</textarea>
+                          <br>
+                          <textarea id="favcharanimeid8" name="fav8" rows="2" cols="50">link</textarea>
+                          <br>
+                          <input type="submit" value="salvar">
+                        </form>
+                    </div>
                 </div>
+                
             </div>   
         </main>
         <footer>
@@ -263,7 +302,6 @@
                 <div id="right" class=" content=">
                     <h3>© 2023 all rights reserved ANIME-SE</h3>
                 </div>
-            </div>
         </div>
         </footer>
         <script src="profile-status-graph.js"></script>

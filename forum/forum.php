@@ -30,7 +30,7 @@ if (!isset($_SESSION["username"])){
             
             </div>
         </header>
-        <h1>Anime-se// Fórum</h1>
+        <h1>Fórum</h1>
         <main>
             <div class ="container">
 

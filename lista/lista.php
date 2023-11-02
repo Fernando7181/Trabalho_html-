@@ -34,7 +34,7 @@ if (!isset($_SESSION["username"])){
             </div>
   </header>
   <br>
-  <h1>Ranking da lista de animes</h1> <br>
+  <h1>Lista do usuário</h1> <br>
 
   <main>
     <table class="Tabela-anime">

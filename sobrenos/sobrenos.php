@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (!isset($_SESSION["username"])){
+    header("location: ./../login/login.html");
+}
+?>
+
 <html>
     <head>
         <meta charset="UTF-8">
@@ -6,13 +13,19 @@
     </head>
     <body>
         <header>
-            <p><a href="./../profile/profile.html">Perfil</a></p>
-            <p><a href="./lista.html">Animes</a></p>
-            <p><a href="./../forum/forum.html">Fórum</a></p>
-            <p><a href="./../sobrenos/sobrenos.html">Sobre</a></p>
-            <p>Lista</p>
-            <p><a href="./../registro/registro.html">Registrar</a></p>
-            <p><a href="./../sair/sair.php">Sair</a></p>
+            <a href="./../profile/profile.php">Perfil</a>
+            <a href="./../animeList/lista.php">Animes</a>
+            <a href="./../forum/forum.php">Fórum</a>
+            <a href="./../sobrenos/sobrenos.php">Sobre</a>
+            <a href="">Lista</a>
+
+            <div class="div-navbar">
+
+            <a href="./../login/login.html">Login</a>
+            <a href="./../registro/registro.html">Registrar</a>
+            <a href="./../sair/sair.php">Sair</a>
+
+            </div>
         </header>
         <main>
             <div class="container">

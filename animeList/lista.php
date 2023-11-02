@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (!isset($_SESSION["username"])){
+    header("location: ./../login/login.html");
+}
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,13 +15,19 @@
 </head>
 <body>
     <header>
-        <p><a href="./../profile/profile.html">Perfil</a></p>
-        <p><a href="./lista.html">Animes</a></p>
-        <p><a href="./../forum/forum.html">Fórum</a></p>
-        <p><a href="./../sobrenos/sobrenos.html">Sobre</a></p>
-        <p>Lista</p>
-        <p><a href="./../registro/registro.html">Registrar</a></p>
-        <p><a href="./../sair/sair.php">Sair</a></p>
+            <a href="./../profile/profile.php">Perfil</a>
+            <a href="./../animeList/lista.php">Animes</a>
+            <a href="./../forum/forum.php">Fórum</a>
+            <a href="./../sobrenos/sobrenos.php">Sobre</a>
+            <a href="">Lista</a>
+
+            <div class="div-navbar">
+
+            <a href="./../login/login.html">Login</a>
+            <a href="./../registro/registro.html">Registrar</a>
+            <a href="./../sair/sair.php">Sair</a>
+
+            </div>
       </header>
     <h1 id = "List">Anime-se</h1>
 
@@ -23,7 +37,7 @@
 
     <div class = "modal">
       <button id="fechar" onclick="fecharBio()">fechar</button>
-      <form action="anime.php" method="post" onsubmit="setTimeout(function(){window.location.reload();},10);">
+      <form action="anime.php" method="post" onsubmit="setTimeout(function(){window.location.reload();},15);">
         <p><label >personalize:</label></p>
         <p><label >nome:</label></p>
         <textarea name="nome" rows="1" cols="20"></textarea><br>

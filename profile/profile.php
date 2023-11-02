@@ -1,20 +1,43 @@
 <?php
-    session_start();
+    session_start(); 
+
+    if (!isset($_SESSION["username"])){
+    header("location: ./../login/login.html");
+    }
+
     $serverName = "mysqlhtml.mysql.database.azure.com";
     $databaseName = "usuarios";
     $username1 = "grupohtml";
     $password = "Nota@100";
     $port = 3306;
 
+    #biografia
     $conn = new mysqli($serverName, $username1, $password, $databaseName);
-    $sql = "SELECT biografia FROM usuarios WHERE username = ?;";
-    $res = $conn->prepare($sql);
+    $sqlBio = "SELECT biografia FROM usuarios WHERE username = ?;";
+    $res = $conn->prepare($sqlBio);
     $res->bind_param("s", $_SESSION["username"]);
     $res->execute();
     $res->store_result();
     $res->bind_result($biografia);
     $res = mysqli_stmt_fetch($res);
-    
+
+    #pfp
+    $sqlPfp = "SELECT pfp FROM usuarios WHERE username = ?;";
+    $res2 = $conn->prepare($sqlPfp);
+    $res2->bind_param("s", $_SESSION["username"]);
+    $res2->execute();
+    $res2->store_result();
+    $res2->bind_result($pfp);
+    $res2 = mysqli_stmt_fetch($res2);    
+
+    #favchar
+    $sqlFavchar = "SELECT perso1 , perso2 FROM usuarios WHERE username = ?;";
+    $res3 = $conn->prepare($sqlFavchar);
+    $res3->bind_param("s", $_SESSION["username"]);
+    $res3->execute();
+    $res3->store_result();
+    $res3->bind_result($favchar1,$favchar2);
+    $res3 = mysqli_stmt_fetch($res3); 
 ?>
 <html>
     <head>
@@ -25,14 +48,13 @@
     </head>
     <body>
         <header>
-            <img id="logo" src="./pictures/LGOO_ANIMA__1_-removebg-preview.png">
-            <a href="./../profile.html">Perfil</a>
-            <a href="./../animeList/lista.html">Animes</a>
-            <a href="./../forum/forum.html">Fórum</a>
-            <a href="./../sobrenos/sobrenos.html">Sobre</a>
+            <a href="./../profile/profile.php">Perfil</a>
+            <a href="./../animeList/lista.php">Animes</a>
+            <a href="./../forum/forum.php">Fórum</a>
+            <a href="./../sobrenos/sobrenos.php">Sobre</a>
             <a href="">Lista</a>
 
-            <div class="separador">
+            <div class="div-navbar">
 
             <a href="./../login/login.html">Login</a>
             <a href="./../registro/registro.html">Registrar</a>
@@ -46,27 +68,53 @@
                 <div class="container-left">
                     <div class="identidade">
                         <div class="pfp">
-                            <img src="./pictures/sesshomaru.jpg">
+                            <img src="<?php echo $pfp?>">
                         </div>
                         <strong id="username"><?php echo $_SESSION["username"]?></strong>
+                    </div>
+                    <div id="butaoimg">
+                        <button id="btnImg" onclick="abrirImg()">editar</button>
+                    </div>
+                    <div class = "modalImg">
+                        <button id="fechar" onclick="fecharImg()">fechar</button>
+                        <form action="pfp.php" method="post" onsubmit="">
+                          <p><label for="pfpid">Link para sua pfp:</label></p>
+                          <textarea id="pfpid" name="pfp" rows="10" cols="50">link</textarea>
+                          <br>
+                          <input type="submit" value="salvar">
+                        </form>
                     </div>
                     <div class="personagens">
                         <b>Personagens Favoritos</b>
                         <div class="imagens">
-                            <img id ="favchar1" src="./pictures/buddy.jpg">
-                            <img id="favchar2" src="./pictures/kaonashi.jpg">
+                            <img id ="favchar1" src="<?php echo $favchar1?>">
+                            <img id="favchar2" src="<?php echo $favchar2?>">
                         </div>
+                        <div id="butaoFavchar">
+                        <button id="btnFavchar" onclick="abrirFavchar()">editar</button>
+                    </div>
+                    <div class = "modalFavchar">
+                        <button id="fechar" onclick="fecharFavchar()">fechar</button>
+                        <form action="favchar.php" method="post" onsubmit="">
+                          <p><label for="favcharid">Link para seus personagens favoritos:</label></p>
+                          <textarea id="favcharid" name="favchar1" rows="5" cols="50">link favchar1</textarea>
+                          <br>
+                          <textarea id="favcharid2" name="favchar2" rows="5" cols="50">link favchar2</textarea>
+                          <br>
+                          <input type="submit" value="salvar">
+                        </form>
+                    </div>
                     </div>
                 </div>
                 <div class="container-right">
                     <div class="minibox">
                         <b>Biografia</b>
                         <p id="biografia"><?php echo $biografia?></p>
-                        <div id="butao">
+                        <div id="butaobio">
                             <button id="btnBio" onclick="abrirBio()">editar</button>
                         </div>
                     </div>
-                    <div class = "modal">
+                    <div class = "modalBio">
                         <button id="fechar" onclick="fecharBio()">fechar</button>
                         <form action="biografia.php" method="post" onsubmit="setTimeout(function(){window.location.reload();},10);">
                           <p><label for="bioid">Escreva sobre voce:</label></p>
@@ -105,52 +153,52 @@
                             <div class="area-barras">
                                 <div class="divisao">
                                     <div id="barra1" class="barra">
-                                        <div class="quantidade">6</div>
+                                        <div class="quantidade"></div>
                                     </div>
                                 </div>
                                 <div class="divisao">
                                     <div id="barra2" class="barra">
-                                        <div class="quantidade">4</div>
+                                        <div class="quantidade"></div>
                                     </div>
                                 </div>
                                 <div class="divisao">
                                     <div id="barra3" class="barra">
-                                        <div class="quantidade">5</div>
+                                        <div class="quantidade"></div>
                                     </div>
                                 </div>
                                 <div class="divisao">
                                     <div id="barra4" class="barra">
-                                        <div class="quantidade">3</div>
+                                        <div class="quantidade"></div>
                                     </div>
                                 </div>
                                 <div class="divisao">
                                     <div id="barra5" class="barra">
-                                        <div class="quantidade">9</div>
+                                        <div class="quantidade"></div>
                                     </div>
                                 </div>
                                 <div class="divisao">
                                     <div id="barra6" class="barra">
-                                        <div class="quantidade">3</div>
+                                        <div class="quantidade"></div>
                                     </div>
                                 </div>
                                 <div class="divisao">
                                     <div id="barra7" class="barra">
-                                        <div class="quantidade">4</div>
+                                        <div class="quantidade"></div>
                                     </div>
                                 </div>
                                 <div class="divisao">
                                     <div id="barra8" class="barra">
-                                        <div class="quantidade">1</div>
+                                        <div class="quantidade"></div>
                                     </div>
                                 </div>
                                 <div class="divisao">
                                     <div id="barra9" class="barra">
-                                        <div class="quantidade">6</div>
+                                        <div class="quantidade"></div>
                                     </div>
                                 </div>
                                 <div class="divisao">
                                     <div id="barra10" class="barra">
-                                        <div class="quantidade">2</div>
+                                        <div class="quantidade"></div>
                                     </div>
                                 </div>
                             </div>

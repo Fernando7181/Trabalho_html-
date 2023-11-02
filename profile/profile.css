@@ -163,6 +163,11 @@ a{
     justify-content: center;
     margin-top: 4px;
 }
+#butaoFav{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
 
 .modalBio{
     width: 500px;
@@ -196,6 +201,18 @@ a{
     display: none; 
     background-color: #e7b715;   
 }
+
+.modalFav{
+    width: 500px;
+    height: 500px;
+    position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    display: none; 
+    background-color: #e7b715;   
+}
+
 
 #fechar{
     float: right;
@@ -391,11 +408,13 @@ footer{
     left: 0px;
     right: 0px;
     bottom: 0px;
-    margin-top: 410px ;
+    margin-top: 500px ;
+    margin-left: 100px;
     padding: 41px;
     height: 40px;
     display: flex;
     color: #CDCDDE;    
+    justify-content: center;
 }
 
 

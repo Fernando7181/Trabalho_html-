@@ -47,9 +47,9 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log(`planejado = ${planejado}`);
         console.log(`assistindo = ${assistindo}`);
 
-        document.querySelector('.bolaStatusVerde + p').textContent = completado;
+        document.querySelector('.bolaStatusVerde + p').textContent = assistindo;
         document.querySelector('.bolaStatusVermelho + p').textContent = dropado;
-        document.querySelector('.bolaStatusAzul + p').textContent = assistindo;
+        document.querySelector('.bolaStatusAzul + p').textContent = completado;
         document.querySelector('.bolaStatusAmarelo + p').textContent = planejado;
 
         const total = assistindo + dropado + completado + planejado;

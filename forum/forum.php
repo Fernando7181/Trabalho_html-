@@ -14,17 +14,20 @@ if (!isset($_SESSION["username"])){
     </head>
     <body>
      <header>
-            <img id="logo" src="./pictures/LGOO_ANIMA__1_-removebg-preview.png">
-            <a href="/profile/profile.html">Perfil</a>
-            <a href="/animeList/lista.html">Animes</a>
-            <a href="/forum/forum.html">Fórum</a>
-            <a href="/sobrenos/sobrenos.html">Sobre</a>
+        <img id="logo" src="./logo.png" width="150px"
+            height="50px">
+            <a href="./../profile/profile.php">Perfil</a>
+            <a href="./../animeList/lista.php">Animes</a>
+            <a href="./../forum/forum.php">Fórum</a>
+            <a href="./../sobrenos/sobrenos.php">Sobre</a>
             <a href="">Lista</a>
-            <div class="separador">
-
-                <a href="./../login/login.html">Login</a>
-                <a href="./../registro/registro.html">Registrar</a>
-                <p><a href="./../sair/sair.php">Sair</a></p>
+        
+            <div class="div-navbar">
+            
+            <a href="./../login/login.html">Login</a>
+            <a href="./../registro/registro.html">Registrar</a>
+            <a href="./../sair/sair.php">Sair</a>
+            
             </div>
         </header>
         <h1>Anime-se// Fórum</h1>

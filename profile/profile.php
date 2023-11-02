@@ -48,18 +48,19 @@
     </head>
     <body>
         <header>
+        <img id="logo" src="./logo.png">
             <a href="./../profile/profile.php">Perfil</a>
             <a href="./../animeList/lista.php">Animes</a>
             <a href="./../forum/forum.php">Fórum</a>
             <a href="./../sobrenos/sobrenos.php">Sobre</a>
             <a href="">Lista</a>
-
+        
             <div class="div-navbar">
-
+            
             <a href="./../login/login.html">Login</a>
             <a href="./../registro/registro.html">Registrar</a>
             <a href="./../sair/sair.php">Sair</a>
-
+            
             </div>
         </header>
     <div class="all">

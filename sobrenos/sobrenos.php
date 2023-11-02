@@ -13,21 +13,21 @@ if (!isset($_SESSION["username"])){
     </head>
     <body>
         <header>
-            <img id="logo" src="/forum/pictures/LGOO_ANIMA__1_-removebg-preview.png"
-            width="150px"
+        <img id="logo" src="./logo.png" width="150px"
             height="50px">
-            <a href="/profile/profile.php">Perfil</a>
-            <a href="/animeList/lista.php">Animes</a>
-            <a href="/forum/forum.php">Fórum</a>
-            <a href="/sobrenos/sobrenos.php">Sobre</a>
+            <a href="./../profile/profile.php">Perfil</a>
+            <a href="./../animeList/lista.php">Animes</a>
+            <a href="./../forum/forum.php">Fórum</a>
+            <a href="./../sobrenos/sobrenos.php">Sobre</a>
             <a href="">Lista</a>
-       
-                   <div class="separador">
-       
-                   <a href="./../login/login.html">Login</a>
-                   <a href="./../registro/registro.html">Registrar</a>
-                   <p><a href="./../sair/sair.php">Sair</a></p>
-               </div>
+        
+            <div class="div-navbar">
+            
+            <a href="./../login/login.html">Login</a>
+            <a href="./../registro/registro.html">Registrar</a>
+            <a href="./../sair/sair.php">Sair</a>
+            
+            </div>
            </header>
         <main>
             <div class="container">
@@ -36,7 +36,7 @@ if (!isset($_SESSION["username"])){
                  </div>
                  <div id="fileira1" class="fileira">
                      <div class="pessoa">
-                         <img class="image" src="/sobrenos/pictures/sesshomaru.jpg" alt="foto">
+                         <img class="image" src="./pictures/sesshomaru.jpg" alt="foto">
                          <p id="nome">Lucas</p>
                          <p id="desc">
                              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -45,7 +45,7 @@ if (!isset($_SESSION["username"])){
                          </p>
                      </div>
                      <div class="pessoa">
-                         <img class="image" src="/sobrenos/pictures/Nowa.png" alt="foto">
+                         <img class="image" src="./pictures/Nowa.png" alt="foto">
                          <p id="nome">Gabi</p>
                          <p id="desc">
                              A tímida extrovertida , acumuladora de bichos de rpg, a estranha .
@@ -54,14 +54,14 @@ if (!isset($_SESSION["username"])){
                  </div>
                  <div id="fileira2" class="fileira">
                      <div class="pessoa">
-                         <img class="image" src="/sobrenos/pictures/nandin.JPG" alt="foto">
+                         <img class="image" src="./pictures/nandin.JPG" alt="foto">
                          <p id="nome">Fernando</p>
                          <p id="desc">
                             Apenas escrevendo uns codigos e aprendendo Front-end
                          </p>
                      </div>
                      <div class="pessoa">
-                         <img class="image" src="/sobrenos/pictures/sesshomaru.jpg" alt="foto">
+                         <img class="image" src="./pictures/sesshomaru.jpg" alt="foto">
                          <p id="nome">Isaac</p>
                          <p id="desc">
                             Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -71,7 +71,7 @@ if (!isset($_SESSION["username"])){
                 </div>
                 <div id="fileira3" class="fileiraespecial">
                     <div class="pessoa">
-                        <img class="image" src="/sobrenos/pictures/sesshomaru.jpg" alt="foto">
+                        <img class="image" src="./pictures/sesshomaru.jpg" alt="foto">
                         <p id="nome">Renan</p>
                         <p id="desc">
                             Lorem ipsum dolor sit, amet consectetur adipisicing elit.

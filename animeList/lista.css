@@ -14,14 +14,64 @@ color: #CDCDDE;
 
 .modal{
     width: 500px;
-    height: 500px;
+    height: 600px;
     position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%,-50%);
     display: none; 
-    background-color: #e7b715;
+    background-color: #5f5f8b;
+    border-radius: 30px;
+    box-shadow: 15px 15px 30px #bebebe,
+             -15px -15px 30px #1b1b29;  
 }
+.modal textarea{position: relative;
+    top: 50px;
+    left: 50px;
+    
+}
+
+.modal label {
+    position: relative;
+    font-weight: bold; 
+    font-size: 20px;   
+    color: #1f1e1e;
+    top: 50px;
+    left: 50px;     
+  }
+
+.modal input{
+    position: relative;
+    height: 50px;
+    width: 100px;
+    top: 100px;
+    left: 50px;
+    font-size: 13px;
+
+}
+.modal label#personalize{
+    position: absolute;
+    font-weight: bold; 
+    font-size: 20px;   
+    color: black;
+    top: 5px;
+    left: 30px;   
+    
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #fechar{
     float: right;

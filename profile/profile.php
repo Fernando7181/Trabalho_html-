@@ -91,10 +91,10 @@
                     <div class = "modalImg">
                         <button id="fechar" onclick="fecharImg()">fechar</button>
                         <form action="pfp.php" method="post" onsubmit="setTimeout(function(){window.location.reload();},32);">
-                          <p><label for="pfpid">Link para sua pfp:</label></p>
+                          <p><label for="pfpid">Link para sua Foto de Perfil:</label></p>
                           <textarea id="pfpid" name="pfp" rows="10" cols="50">link</textarea>
                           <br>
-                          <input type="submit" value="salvar">
+                          <input id="salvar" type="submit" value="salvar">
                         </form>
                     </div>
                     <div class="personagens">
@@ -110,11 +110,11 @@
                         <button id="fechar" onclick="fecharFavchar()">fechar</button>
                         <form action="favchar.php" method="post" onsubmit="setTimeout(function(){window.location.reload();},32);">
                           <p><label for="favcharid">Link para seus personagens favoritos:</label></p>
-                          <textarea id="favcharid" name="favchar1" rows="5" cols="50">link favchar1</textarea>
+                          <textarea id="favcharid" name="favchar1" rows="5" cols="50">link 1</textarea>
                           <br>
-                          <textarea id="favcharid2" name="favchar2" rows="5" cols="50">link favchar2</textarea>
+                          <textarea id="favcharid2" name="favchar2" rows="5" cols="50">link 2</textarea>
                           <br>
-                          <input type="submit" value="salvar">
+                          <input id="salvar" type="submit" value="salvar">
                         </form>
                     </div>
                     </div>
@@ -133,7 +133,7 @@
                           <p><label for="bioid">Escreva sobre voce:</label></p>
                           <textarea id="bioid" name="biografia" rows="10" cols="50">biografia</textarea>
                           <br>
-                          <input type="submit" value="salvar">
+                          <input id="salvar" type="submit" value="salvar">
                         </form>
                     </div>
                     <div class="minibox">
@@ -265,7 +265,7 @@
                           <br>
                           <textarea id="favcharanimeid8" name="fav8" rows="2" cols="50">link</textarea>
                           <br>
-                          <input type="submit" value="salvar">
+                          <input id="salvar" type="submit" value="salvar">
                         </form>
                     </div>
                 </div>

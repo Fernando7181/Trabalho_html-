@@ -40,10 +40,10 @@ if (!isset($_SESSION["username"])){
     <div class = "modal">
       <button id="fechar" onclick="fecharBio()">fechar</button>
       <form action="anime.php" method="post" onsubmit="setTimeout(function(){window.location.reload();},15);">
-        <p><label >personalize:</label></p>
+        <p><label id="personalize" >Personalize:</label></p>
         <p><label >nome:</label></p>
         <textarea name="nome" rows="1" cols="20"></textarea><br>
-        <p><label >link imagem:</label></p>
+        <p><label >link da imagem:</label></p>
         <textarea name="img" rows="1" cols="20"></textarea><br>
         <p><label >nota:</label></p>
         <textarea name="nota" rows="1" cols="20"></textarea><br>

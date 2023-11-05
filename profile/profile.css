@@ -137,7 +137,11 @@ a{
 
 #biografia{
     font-family: Georgia, serif;
+    overflow: hidden;
+    text-overflow: ellipsis;
     display: flex;
+    -webkit-line-clamp: 3; 
+    -webkit-box-orient: vertical;
     justify-content: center;
     padding-top: 9px;
     padding-bottom: 10px;

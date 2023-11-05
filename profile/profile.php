@@ -65,7 +65,7 @@
             <a href="./../animeList/lista.php">Animes</a>
             <a href="./../forum/forum.php">Fórum</a>
             <a href="./../sobrenos/sobrenos.php">Sobre</a>
-            <a href="">Lista</a>
+            <a href="./../lista/lista.php">Lista</a>
         
             <div class="div-navbar">
             
@@ -291,12 +291,12 @@
                 </div>    
                 <div id="center" class="content">
                     <ul>
-                        <li><a href="./../profile.html">Perfil</a></li>
-                        <li><a href="./../animeList/lista.html">Animes</a></li>
-                        <li><a href="./../forum/forum.html">Fórum</a></li>
-                        <li><a href="./../sobrenos/sobrenos.html">Sobre</a></li>
-                        <li><a href="#">Lista</a></li>
-                        <li><a href="#">Sair</a></li>
+                    <li><a href="./../profile/profile.php">Perfil</a></li>
+                        <li><a href="./../animeList/lista.php">Animes</a></li>
+                        <li><a href="./../forum/forum.php">Fórum</a></li>
+                        <li><a href="./../sobrenos/sobrenos.php">Sobre</a></li>
+                        <li><a href="./../lista/lista.php">Lista</a></li>
+                        <li><a href="./../sair/sair.php">Sair</a></li>
                     </ul> 
                 </div>
                 <div id="right" class=" content=">

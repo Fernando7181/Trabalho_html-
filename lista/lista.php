@@ -23,7 +23,7 @@ if (!isset($_SESSION["username"])){
             <a href="./../animeList/lista.php">Animes</a>
             <a href="./../forum/forum.php">Fórum</a>
             <a href="./../sobrenos/sobrenos.php">Sobre</a>
-            <a href="">Lista</a>
+            <a href="./../lista/lista.php">Lista</a>
         
             <div class="div-navbar">
             

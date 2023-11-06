@@ -39,16 +39,14 @@ if (!isset($_SESSION["username"])){
                          <img class="image" src="./pictures/sesshomaru.jpg" alt="foto">
                          <p id="nome">Lucas</p>
                          <p id="desc">
-                             Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                             Perferendis eveniet ducimus suscipit dolorem veniam rem,
-                            eaque doloremque quidem ab tempora
+                             Lorem ipsum dolor sit.
                          </p>
                      </div>
                      <div class="pessoa">
                          <img class="image" src="./pictures/Nowa.png" alt="foto">
                          <p id="nome">Gabi</p>
                          <p id="desc">
-                             A tímida extrovertida , acumuladora de bichos de rpg, a estranha .
+                             A tímida extrovertida e acumuladora de bichos de rpg.
                          </p>
                      </div>
                  </div>
@@ -61,18 +59,17 @@ if (!isset($_SESSION["username"])){
                          </p>
                      </div>
                      <div class="pessoa">
-                         <img class="image" src="./pictures/sesshomaru.jpg" alt="foto">
+                         <img class="image" src="isaac.png" alt="foto">
                          <p id="nome">Isaac</p>
                          <p id="desc">
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                            Perferendis eveniet ducimus suscipit dolorem veniam rem, eaque doloremque quidem ab tempora
+                            Apaixonado por tecnologia e inovação.
                         </p>
                     </div>
                 </div>
                 <div id="fileira3" class="fileiraespecial">
                     <div class="pessoa">
                         <img class="image" src="./pictures/sesshomaru.jpg" alt="foto">
-                        <p id="nome">Renan</p>
+                        <p id="nome">Matheus</p>
                         <p id="desc">
                             Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                             Perferendis eveniet ducimus suscipit dolorem veniam rem, eaque doloremque quidem ab tempora

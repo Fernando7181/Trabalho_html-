@@ -71,7 +71,7 @@ if (!isset($_SESSION["username"])){
                         <img class="image" src="./pictures/sesshomaru.jpg" alt="foto">
                         <p id="nome">Matheus</p>
                         <p id="desc">
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                            Lorem ipsum dolor sit, amet consectetur adipisicing .
                             Perferendis eveniet ducimus suscipit dolorem veniam rem, eaque doloremque quidem ab tempora
                         </p>
                     </div>

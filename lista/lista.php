@@ -52,6 +52,7 @@ if (!isset($_SESSION["username"])){
     </table>
   </main>
   <script src="script.js"></script>
+  
 </body>
 
 </html>

@@ -87,7 +87,7 @@ if (!isset($_SESSION["username"])){
                 <div class="container_bottom">
                     <div id="article_4" class="article">
                         <div class="imagens">
-                            <a href="/forum/Article4/old_animes.html"><img id="posters" src="pictures/top10.jpg">
+                            <a href="./Article4/old_animes.html"><img id="posters" src="pictures/top10.jpg">
                                 </a>
                         </div>
                         <div class="titulo">
@@ -103,7 +103,7 @@ if (!isset($_SESSION["username"])){
                     </div>
                     <div id="article_5" class="article">
                         <div class="imagens">
-                            <a href="/forum/Article5/sad.html"><img id="posters" src="pictures/animes-tristes.jpg">
+                            <a href="./Article5/sad.html"><img id="posters" src="pictures/animes-tristes.jpg">
 
                             </a>
                         </div>
@@ -120,7 +120,7 @@ if (!isset($_SESSION["username"])){
                     </div>
                     <div id="article_6" class="article">
                         <div class="imagens">
-                            <a href="/forum/Article6/anime_movies.html"><img id="posters" src="pictures/melhores-filmes-de-anime-og.jpg">
+                            <a href="./Article6/anime_movies.html"><img id="posters" src="pictures/melhores-filmes-de-anime-og.jpg">
                             </a>
                         </div>
                         <div class="titulo">
